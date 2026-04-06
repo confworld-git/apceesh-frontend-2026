@@ -17,8 +17,10 @@ import Addons from "./Addons.jsx";
 
 // ─── Pricing Calculator ────────────────────────────────────────────────────────
 // Receives combinedBase (fee + journal + addons) — discounts apply to the whole
-const calculatePricing = ({ baseAmount, participantCategory, hasMembership, hasCoupon }) => {
+const calculatePricing = ({ baseAmount, journalAmount = 0, addonsAmount = 0, participantCategory, hasMembership, hasCoupon }) => {
   const base = parseFloat(baseAmount);
+  const journal = parseFloat(journalAmount) || 0;
+  const addons = parseFloat(addonsAmount) || 0;
   const membershipFeeAmount = participantCategory?.toLowerCase().includes("student") ? 15 : 20;
 
   let calc = {
@@ -32,31 +34,30 @@ const calculatePricing = ({ baseAmount, participantCategory, hasMembership, hasC
     total: base,
   };
 
+  // Discounts on BASE ONLY
   if (hasMembership && hasCoupon) {
     calc.totalDiscount = base * 0.10;
     calc.membershipFee = membershipFeeAmount;
     calc.membershipDiscount = base * 0.05;
     calc.couponDiscount = base * 0.05;
-    calc.finalAmount = base - calc.totalDiscount + calc.membershipFee;
-  } else if (hasMembership && !hasCoupon) {
+  } else if (hasMembership) {
     calc.membershipDiscount = base * 0.05;
     calc.totalDiscount = calc.membershipDiscount;
     calc.membershipFee = membershipFeeAmount;
-    calc.finalAmount = base - calc.membershipDiscount + calc.membershipFee;
-  } else if (!hasMembership && hasCoupon) {
+  } else if (hasCoupon) {
     calc.couponDiscount = base * 0.05;
     calc.totalDiscount = calc.couponDiscount;
-    calc.finalAmount = base - calc.couponDiscount;
-  } else {
-    calc.finalAmount = base;
   }
+
+  const discountedBase = base - calc.totalDiscount;
+  calc.finalAmount = discountedBase + journal + addons + calc.membershipFee;
 
   const bankTax = calc.finalAmount * 0.060;
   calc.bankTax = parseFloat(bankTax.toFixed(2));
   calc.total = parseFloat((calc.finalAmount + bankTax).toFixed(2));
 
   Object.keys(calc).forEach((key) => {
-    calc[key] = parseFloat(calc[key].toFixed(2));
+    calc[key] = parseFloat(Number(calc[key]).toFixed(2));
   });
 
   return calc;
@@ -309,30 +310,23 @@ const RegistrationFee = () => {
   const [appliedCouponCode, setAppliedCouponCode] = useState("");
 
   // ── Derived pricing — discounts apply to (fee + journal + addons) ────────────
-  const journalAmount = selectedJournal?.specialPrice || 0;
-  const addonsAmount = selectedAddons.reduce((sum, a) => sum + a.price, 0);
-  const combinedBase = selectedBase
-    ? selectedBase.value + journalAmount + addonsAmount
-    : 0;
+  // Remove combinedBase entirely
+const journalAmount = selectedJournal?.specialPrice || 0;
+const addonsAmount = selectedAddons.reduce((sum, a) => sum + a.price, 0);
 
-  const pricing = selectedBase
-    ? calculatePricing({
-        baseAmount: combinedBase,
-        participantCategory,
-        hasMembership: membership,
-        hasCoupon: couponDiscount > 0,
-      })
-    : {
-        baseAmount: 0,
-        membershipDiscount: 0,
-        couponDiscount: 0,
-        membershipFee: 0,
-        totalDiscount: 0,
-        finalAmount: 0,
-        bankTax: 0,
-        total: 0,
-      };
-
+const pricing = selectedBase
+  ? calculatePricing({
+      baseAmount: selectedBase.value,   // base fee ONLY
+      journalAmount,
+      addonsAmount,
+      participantCategory,
+      hasMembership: membership,
+      hasCoupon: couponDiscount > 0,
+    })
+  : {
+      baseAmount: 0, membershipDiscount: 0, couponDiscount: 0,
+      membershipFee: 0, totalDiscount: 0, finalAmount: 0, bankTax: 0, total: 0,
+    };
   const handleBaseSelect = (value, title, category) => {
     setSelectedBase({ value, title, category });
   };
