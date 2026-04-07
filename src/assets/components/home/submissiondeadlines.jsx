@@ -120,7 +120,7 @@ export default function SubmissionDeadlines() {
 
           <a
             href="/registration-fees"
-            className="flex-1 text-center !text-white py-2 rounded-lg bg-amber-400 hover:opacity-90 transition"
+            className="flex-1 text-center !text-blue-800 py-2 rounded-lg bg-amber-400 hover:opacity-90 transition"
           >
             Register Now
           </a>
