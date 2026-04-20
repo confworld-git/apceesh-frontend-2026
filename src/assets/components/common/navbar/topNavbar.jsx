@@ -109,7 +109,7 @@ export default function TopNavbar() {
   {
     title: "info@cerada.in",
     icon: mail,
-    link: "mailto:info@iclshma.com",
+    link: "mailto:info@cerada.in",
     alt: "mail-icon",
   },
   {
