@@ -103,9 +103,9 @@ const Speakers = () => {
                   <section className="min-h-screen bg-gray-100">
       
 
-      {renderSection("Welcome Address")}
+      {/* {renderSection("Welcome Address")}
       {renderSection("Guest of Honour")}
-      {renderSection("Conference Chair")}
+      {renderSection("Conference Chair")} */}
       {renderSection("Keynote Speakers")}
       {renderSection("Session Speakers")}
       {renderSection("Session Chairs")}
