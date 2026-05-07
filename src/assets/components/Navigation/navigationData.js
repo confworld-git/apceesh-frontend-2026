@@ -12,14 +12,22 @@ export const navigationData = [
         title: "About Organizer",
         path: "/about-organizer",
       },
+      // {
+      //   title: "Speakers",
+      //   path: "/speakerlist",
+      // },
       {
         title: "Speakers",
         path: "/speakers",
       },
-      {
-        title: "Organizing Committee Member",
-        path: "/organizing-committee-member",
-      },
+      // {
+      //   title: "Organizing Committee Member",
+      //   path: "/organizing-committee-member",
+      // },
+      // {
+      //   title: "Organizing Committee Member",
+      //   path: "/organizinglist",
+      // },
       {
         title: "Organizing Committee Form",
         path: "/organizing-committee-member-form",

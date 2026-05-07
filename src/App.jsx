@@ -21,8 +21,10 @@ import FAQ from "./assets/view/faq/faq";
 import Venue from "./assets/view/venue/Venue";
 import Contactus from "./assets/view/contact-us/Contact-us";
 import Speakers from "./assets/view/speakers/Speakers";
+import SpeakerList from "./assets/view/speakers/SpeakerGrid";
 import Sponsors from "./assets/view/sponsors/Sponsors";
 import OrganizingCommitteeMembers from "./assets/view/speakers/OrganizingCommitteeMembers";
+import OCMList from "./assets/view/speakers/OCMGrid";
 import Login from "./assets/view/login/Login";
 import Protected from "./assets/view/protected/Protected";
 
@@ -71,11 +73,16 @@ function App() {
           {/* About Pages */}
           <Route path="about-apceesh" element={<AboutApceesh />} />
           <Route path="about-organizer" element={<AboutOrganizer />} />
-          <Route path="speakers" element={<Speakers/>} />
+          <Route path="speakers" element={<SpeakerList/>} />
+          <Route path="speakerlist" element={<Speakers/>} />
           <Route path="sponsors" element={<Sponsors/>} />
           <Route
-            path="organizing-committee-member"
+            path="organizinglist"
             element={<OrganizingCommitteeMembers/>}
+          />
+          <Route
+            path="organizing-committee-member"
+            element={<OCMList/>}
           />
           <Route
             path="organizing-committee-member-form"
