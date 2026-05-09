@@ -156,7 +156,7 @@ export default function StylizedFooter() {
                   <ul className="space-y-3 text-blue-100 font-semibold">
                     <li className="group">
                       <a
-                        href="https://www.facebook.com/people/Confworld-Educational-Research-and-Development-Association/61560894663027/"
+                        href="https://www.facebook.com/profile.php?id=61588892235690"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-x-3 hover:text-amber-400 transition-colors duration-300"

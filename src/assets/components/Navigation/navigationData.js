@@ -89,7 +89,7 @@ export const navigationData = [
   },
   {
     title: "Exhibits and Sponsors",
-    path: "/Sponsors",
+    path: "/exhibits-and-sponsors",
   },
   {
     title: "FAQ",

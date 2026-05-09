@@ -301,7 +301,7 @@ export default function AboutPage() {
 
               <div className="space-y-5">
                 {/* Student */}
-                <a href="https://confworld.org/student" target='_blank' className="group block relative overflow-hidden">
+                <a href="https://confworld.org/student-membership" target='_blank' className="group block relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-500 transform -skew-y-2 group-hover:skew-y-0 transition-transform duration-300"></div>
                   <div className="relative bg-white border-l-8 border-amber-500 p-6 transform group-hover:translate-x-2 transition-transform duration-300 shadow-lg">
                     <div className="flex items-center justify-between">
@@ -320,7 +320,7 @@ export default function AboutPage() {
                 </a>
 
                 {/* Institutional */}
-                <a href="https://confworld.org/institutional" target='_blank' className="group block relative overflow-hidden">
+                <a href="https://confworld.org/institutional-membership" target='_blank' className="group block relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 transform -skew-y-2 group-hover:skew-y-0 transition-transform duration-300"></div>
                   <div className="relative bg-white border-l-8 border-blue-600 p-6 transform group-hover:translate-x-2 transition-transform duration-300 shadow-lg">
                     <div className="flex items-center justify-between">
@@ -339,7 +339,7 @@ export default function AboutPage() {
                 </a>
 
                 {/* Professional */}
-                <a href="https://confworld.org/professional" target='_blank' className="group block relative overflow-hidden">
+                <a href="https://confworld.org/professional-membership" target='_blank' className="group block relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 transform -skew-y-2 group-hover:skew-y-0 transition-transform duration-300"></div>
                   <div className="relative bg-white border-l-8 border-cyan-600 p-6 transform group-hover:translate-x-2 transition-transform duration-300 shadow-lg">
                     <div className="flex items-center justify-between">

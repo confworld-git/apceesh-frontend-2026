@@ -75,7 +75,7 @@ function App() {
           <Route path="about-organizer" element={<AboutOrganizer />} />
           <Route path="speakers" element={<SpeakerList/>} />
           <Route path="speakerlist" element={<Speakers/>} />
-          <Route path="sponsors" element={<Sponsors/>} />
+          <Route path="exhibits-and-sponsors" element={<Sponsors/>} />
           <Route
             path="organizinglist"
             element={<OrganizingCommitteeMembers/>}
