@@ -59,7 +59,7 @@ export default function StylizedFooter() {
           ))}
         </div>
 
-        <div className="relative z-10 w-full px-6 py-12 lg:py-16">
+        <div className="relative z-10 w-full px-6 pt-12 pb-3 lg:pt-16 lg:pb-3">
           <div className="max-w-7xl mx-auto">
             <div className="md:flex md:justify-between md:gap-8">
               {/* Logo and Conference Info */}
@@ -310,8 +310,8 @@ export default function StylizedFooter() {
                       ORGANIZER ADDRESS
                     </h3>
                     <div className="text-xs text-blue-100 leading-relaxed">
-                      No.147/383A, Second Floor, Paper Mills Road, Peravallur,
-                      Chennai-600082, Tamil Nadu, India.
+                      Address: No. 25/4,First Floor, Madhavaram High Road,
+                      Perambur, Chennai - 600011,Tamil Nadu, India.
                     </div>
                   </div>
                 </div>
@@ -319,19 +319,18 @@ export default function StylizedFooter() {
             </div>
 
             {/* Copyright Section */}
-            <div className="mt-12 pt-8 border-t-2 border-amber-400/30">
-              <div className="text-center">
-                <span className="text-blue-100 font-semibold">
-                  © 2026{" "}
-                  <a
-                    href="https://confworld.org/"
-                    className="text-amber-400 font-black hover:text-amber-300 transition-colors"
-                  >
-                    CERADA
-                  </a>
-                  . All Rights Reserved.
-                </span>
-              </div>
+            {/* Copyright Section */}
+            <div className="mt-6 pb-[2px] flex justify-center items-end">
+              <span className="text-blue-100 font-semibold text-sm md:text-base text-center leading-none">
+                © 2026{" "}
+                <a
+                  href="https://confworld.org/"
+                  className="text-amber-400 font-black hover:text-amber-300 transition-colors"
+                >
+                  CERADA
+                </a>
+                . All Rights Reserved.
+              </span>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 export default function LogoMarquee() {
   // Dummy logo data - replace with your actual logo paths
   const logos = [
+    { id: 12, src: "/images/institutes/12.webp", alt: "Logo 12" },
     { id: 1, src: "/images/institutes/1.webp", alt: "Logo 1" },
     { id: 2, src: "/images/institutes/2.webp", alt: "Logo 2" },
     { id: 9, src: "/images/institutes/9.webp", alt: "Logo 9" },

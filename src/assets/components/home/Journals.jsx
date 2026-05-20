@@ -8,6 +8,25 @@ export default function ConferenceCarousel() {
     {
       type: "Research article • Restricted access",
       title:
+        "Beyond Fragmented Leadership Models: A Conceptual Integrated Theory of Leadership Effectiveness in a VUCA World",
+      authors: "Millicent Lindiwe Ndaba, S. Sivakumar ",
+      publication: "Human Arenas",
+      year: "2026",
+      pages: "",
+    },
+    {
+      type: "Research article • Restricted access",
+      title:
+        "From trend to strategic practices: a bibliometric analysis of knowledge management in communications and multimedia-related sectors",
+      authors:
+        "Aidawati Abd Rahman, Norasyikin Shaikh Ibrahim, Rohaizan Daud, Min Hui Leow",
+      publication: "Quality & Quantity",
+      year: "2026",
+      pages: "",
+    },
+    {
+      type: "Research article • Restricted access",
+      title:
         "Exploring the Interplay Between Parenting Style, Dark Triad, Cultural Capital, and Internet Addiction Disorders of College Students: A Cross-Cultural CBD Framework Analysis",
       authors: "Jing Qiaoqiao, Muzi Li, Chew Fong Peng, Chan Wai Yin and Rusdi Abd Rashid",
       publication: "Applied Research in Quality of Life",
@@ -18,7 +37,7 @@ export default function ConferenceCarousel() {
       type: "Research article • Restricted access",
       title:
         "Women’s Economic Empowerment in Dhaka: Overcoming Gender-Based Challenges in Banking and Finance",
-      authors: "Rumpa Neogi, Arnab Bhattacharjee and Tanushree Biswas",
+      authors: "Rumpa Neogi, Arnab Bhattacharjee, Tanushree Biswas",
       publication: "Human Arenas",
       year: "2026",
       pages: "",
